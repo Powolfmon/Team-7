@@ -11,6 +11,8 @@ public class CreateEventFunction : MonoBehaviour
 {
     public GameObject ObjectToMake;
 
+    //added content
+
     //function can be run to create given object
     public void CreateObject()
     {

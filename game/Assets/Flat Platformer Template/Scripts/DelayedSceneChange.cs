@@ -12,5 +12,24 @@ public class DelayedSceneChange : MonoBehaviour
     public float Delay = 0.0f;
     //name of level to load
     public string NextScene = "GameOver";
-    
+
+    //added content
+
+    //function will change scene after a specified delay when run
+    public void ChangeScene()
+    {
+        print("Started");
+        StartCoroutine(DelayedChange());
+    }
+
+    IEnumerator DelayedChange()
+    {
+        print("before delay");
+
+        yield return new WaitForSeconds(Delay);
+
+        print("after");
+        SceneManager.LoadScene(NextScene);
+    }
+
 }
